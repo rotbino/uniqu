@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Montaman</title>
+</head>
+<body>
+<div style=" margin-top: 177px;flex-direction: row;  align-items: center; justify-content: center;align-self: center ">
+    <h2 style="text-align: center;color: <%= payResult.status == 0 && payResult.Token > 0 ? 'white' : 'black' %>; background-color: <%= payResult.status == 0 && payResult.Token > 0 ? 'green' : 'yellow' %>;  ">
+        <%= payResult.status == 0 && payResult.Token > 0 ?  "تراکنش با موفقیت ثبت شد" :
+                payResult.status == -138 ? "انصراف از پرداخت" : "پرداخت ناموفق"%></h2>
+</div>
+<div style=" margin-top: 17px;flex-direction: row;  align-items: center; justify-content: center;align-self: center ">
+    <h2 style="margin-top: 13px; text-align: center;color: white; background-color: orange;  "> شماره فاکتور: <%= payResult.OrderId %> </h2>
+
+    <% if (payResult.RRN) { %>
+        <h2 style="text-align: center;color: white; background-color: orange;  "> شماره پیگیری: <%= payResult.RRN %> </h2>
+    <% } %>
+
+    <% if (payResult.Amount) { %>
+        <h2 style="margin-top: 13px; text-align: center;color: white; background-color: orange;  "> مبلغ: <%= payResult.Amount %> </h2>
+    <% } %>
+
+</div>
+<div style="text-align: center; margin-top: 117px">
+        <a style="
+        text-decoration: none;
+        padding: 13px;
+        font-size: 33px;
+        background-color: green;
+        color: white;
+        text-align: center"
+        href="montamanapp://mainScreen/PayAnnounce/<%= payResult.OrderId %>/<%=payResult.Token%>/<%=payResult.status%>">مشاهده لیست تراکنش ها</a>
+
+
+</div>
+</body>
+</html>

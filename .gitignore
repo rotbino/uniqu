@@ -1,0 +1,10 @@
+node_modules
+public/images/*.jpg
+
+*.log
+
+/public/images/
+/.idea/
+/monta-apartment-firebase-adminsdk-6i5ty-816677f553.json
+/.idea/*
+/views/images/
