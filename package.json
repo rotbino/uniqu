@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "snyk test",
-    "start": "node server.js",
+    "start": "node app.js",
     "dev": "export NODE_ENV=dev && nodemon server.js"
   },
   "author": "S.Yousefi",
