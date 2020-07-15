@@ -278,7 +278,7 @@ app.get('/download/tazh/:fileName', function (req, res) {
 //const port = process.env.NODE_ENV === 'production' ? serverConfig.productPort : serverConfig.testPort;
 const port = serverConfig.productPort;
 logger.info('APAMAN Path %s', process.env.PWD);
-app.listen(3000, function () {
+app.listen(80, function () {
     logger.info('********* Server is running on Port: %s', port);
 });
 
