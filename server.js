@@ -43,7 +43,8 @@ const sql = require('mssql');
 // dbConfig for your database
 
 const config = require('config');
-const dbConfig = process.env.NODE_ENV === 'production' ? config.get('APAMAN.dbConfig') : config.get('APAMAN.dbConfigTest');
+//const dbConfig = process.env.NODE_ENV === 'production' ? config.get('APAMAN.dbConfig') : config.get('APAMAN.dbConfigTest');
+const dbConfig =  config.get('APAMAN.dbConfig') ;
 pool = new sql.ConnectionPool(dbConfig);
 sqlConnect();
 
@@ -273,9 +274,9 @@ app.get('/download/tazh/:fileName', function (req, res) {
 
 // start server
 
-const port = process.env.NODE_ENV === 'production' ? serverConfig.productPort : serverConfig.testPort;
+//const port = process.env.NODE_ENV === 'production' ? serverConfig.productPort : serverConfig.testPort;
+const port = serverConfig.productPort;
 logger.info('APAMAN Path %s', process.env.PWD);
-
 app.listen(3000, function () {
     logger.info('********* Server is running on Port: %s', port);
 });

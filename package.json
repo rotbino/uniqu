@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "snyk test",
-    "start": "export NODE_ENV=production && nodemon server.js",
+    "start": "export NODE_ENV=production && node server.js",
     "dev": "export NODE_ENV=dev && nodemon server.js"
   },
   "author": "S.Yousefi",
@@ -23,7 +23,6 @@
     "mssql": "^5.1.0",
     "multer": "^1.4.2",
     "node-schedule": "^1.3.2",
-    "nodemon": "^2.0.4",
     "openurl": "^1.1.1",
     "opn": "^6.0.0",
     "soap": "^0.30.0",
