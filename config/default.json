@@ -3,7 +3,7 @@
     "dbConfig": {
       "user": "ApartmentApp",
       "password": "12983476",
-      "server": "10.1.1.80",
+      "server": "82.99.244.122",
       "port": 2575,
       "database": "Apartment-New",
       "pool": {

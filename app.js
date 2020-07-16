@@ -47,7 +47,7 @@ const config = require('config');
 //const dbConfig = process.env.NODE_ENV === 'production' ? config.get('APAMAN.dbConfig') : config.get('APAMAN.dbConfigTest');
 const dbConfig =  config.get('APAMAN.dbConfig') ;
 pool = new sql.ConnectionPool(dbConfig);
-//sqlConnect();
+sqlConnect();
 
 function sqlConnect() {
     pool.connect()
@@ -280,7 +280,7 @@ const port = serverConfig.productPort;
 logger.info('APAMAN Path %s', process.env.PWD);
 app.set('port', (process.env.PORT || 5000))
 app.listen(app.get('port'), function () {
-    logger.info('********* Server is running on Port: %s', port);
+   // logger.info('********* Server is running on Port: %s', port);
     logger.info('********* Server is running on Port: %s', app.get('port'));
 });
 
