@@ -281,6 +281,7 @@ logger.info('APAMAN Path %s', process.env.PWD);
 app.set('port', (process.env.PORT || 5000))
 app.listen(app.get('port'), function () {
     logger.info('********* Server is running on Port: %s', port);
+    logger.info('********* Server is running on Port: %s', app.get('port'));
 });
 
 process.on('unhandledRejection', (reason, promise) => {
