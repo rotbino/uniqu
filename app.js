@@ -47,7 +47,7 @@ const config = require('config');
 //const dbConfig = process.env.NODE_ENV === 'production' ? config.get('APAMAN.dbConfig') : config.get('APAMAN.dbConfigTest');
 const dbConfig =  config.get('APAMAN.dbConfig') ;
 pool = new sql.ConnectionPool(dbConfig);
-sqlConnect();
+//sqlConnect();
 
 function sqlConnect() {
     pool.connect()
