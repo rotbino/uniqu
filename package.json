@@ -30,6 +30,6 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "snyk": "^1.241.0"
+    "snyk": "^1.996.0"
   }
 }
